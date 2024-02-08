@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_c10_monday/home/home.dart';
+import 'package:islami_c10_monday/my_theme.dart';
+import 'package:islami_c10_monday/sura_details.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +16,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: HomeScreen.routeName,
+      theme: MyThemeData.lightTheme,
+      darkTheme: MyThemeData.darkTheme,
+      themeMode: ThemeMode.light,
       routes: {
         HomeScreen.routeName: (context) =>   HomeScreen(),
+        SuraDetailsScreen.routeName: (context) =>   SuraDetailsScreen(),
       },
     );
   }
