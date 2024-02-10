@@ -35,7 +35,7 @@ class RadioTab extends StatelessWidget {
 
           Container(
             margin: const EdgeInsets.only(left: 25, top: 60),
-            height: 41.14,
+            height: 41,
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
