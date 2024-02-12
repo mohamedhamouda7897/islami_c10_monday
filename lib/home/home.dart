@@ -28,18 +28,15 @@ class _HomeScreenState extends State<HomeScreen> {
           fit: BoxFit.fill,
         ),
         Scaffold(
-          backgroundColor: Colors.transparent,
           appBar: AppBar(
-            backgroundColor: Colors.transparent,
             title: Text(
               "إسلامي",
-              style: GoogleFonts.elMessiri(
-                  fontSize: 30, fontWeight: FontWeight.bold),
             ),
-            centerTitle: true,
           ),
+
           bottomNavigationBar: BottomNavigationBar(
               currentIndex: index,
+
               showSelectedLabels: false,
               showUnselectedLabels: false,
               backgroundColor: const Color(0xFFB7935F),
@@ -48,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
               iconSize: 35,
               elevation: 0,
               unselectedItemColor: Colors.black38,
+
               onTap: (value) {
                 index = value;
                 setState(() {});
