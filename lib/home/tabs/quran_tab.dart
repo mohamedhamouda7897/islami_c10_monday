@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_c10_monday/sura_details.dart';
-import 'package:islami_c10_monday/sura_model.dart';
+import 'package:islami_c10_monday/models/sura_model.dart';
 
 class QuranTab extends StatelessWidget {
   QuranTab({super.key});

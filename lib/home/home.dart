@@ -9,7 +9,7 @@ import 'package:islami_c10_monday/home/tabs/settings_tab.dart';
 class HomeScreen extends StatefulWidget {
   static const String routeName = "Home";
 
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -33,9 +33,15 @@ class _HomeScreenState extends State<HomeScreen> {
               "إسلامي",
             ),
           ),
-
           bottomNavigationBar: BottomNavigationBar(
               currentIndex: index,
+              showSelectedLabels: false,
+              showUnselectedLabels: false,
+              backgroundColor: const Color(0xFFB7935F),
+              type: BottomNavigationBarType.fixed,
+              selectedItemColor: Colors.white,
+              elevation: 0,
+              unselectedItemColor: Colors.black38,
               onTap: (value) {
                 index = value;
                 setState(() {});
@@ -65,7 +71,9 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> tabs = [
     QuranTab(),
     SebhaTab(),
-    const AhadethTab(),
+  
+     AhadethTab(),
+
     const RadioTab(),
     const SettingsTab()
   ];

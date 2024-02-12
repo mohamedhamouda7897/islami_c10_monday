@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+import 'package:google_fonts/google_fonts.dart';
+import 'package:islami_c10_monday/hadeth_details.dart';
 import 'package:islami_c10_monday/home/home.dart';
 import 'package:islami_c10_monday/home/tabs/radio_tab.dart';
 import 'package:islami_c10_monday/home/tabs/sebha_tab.dart';
@@ -21,10 +24,10 @@ class MyApp extends StatelessWidget {
       darkTheme: MyThemeData.darkTheme,
       themeMode: ThemeMode.light,
       routes: {
-        HomeScreen.routeName: (context) =>   HomeScreen(),
-        SuraDetailsScreen.routeName: (context) =>   SuraDetailsScreen(),
-        RadioTab.routeName: (context) => const RadioTab(),
-        SebhaTab.routeName: (context) =>  SebhaTab(),
+
+        HomeScreen.routeName: (context) => HomeScreen(),
+        SuraDetailsScreen.routeName: (context) => SuraDetailsScreen(),
+        HadethDetails.routeName: (context) => HadethDetails(),
       },
     );
   }

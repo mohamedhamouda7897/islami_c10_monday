@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:islami_c10_monday/my_theme.dart';
 
 class SebhaTab extends StatefulWidget {
-  static const String routeName = "SebhaTab";
-
   const SebhaTab({super.key});
 
   @override
@@ -11,89 +10,96 @@ class SebhaTab extends StatefulWidget {
 }
 
 class _SebhaTabState extends State<SebhaTab> {
-  int num = 0;
-  int index = 0;
-  List<String> Azkar = [
-    "سبحان الله",
-    "الحمدلله",
-    "لا اله الا الله",
-    "الله اكبر "
-  ];
 
+  int counter = 0;
+  int index = 0;
+  List<String> tasbehat = [
+    "سبحان الله",
+    "الحمد الله",
+    " الله اكبر",
+    " لا حول ولا قوه الا بالله"
+  ];
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 40,
-                left: 50,
-              ),
-              child: Image.asset(
-                "assets/images/sebha1.png",
-                width: 73,
-                height: 105,
-              ),
-            ),
-            Image.asset("assets/images/sebha2.png"),
-            const SizedBox(
-              height: 39,
-            ),
-            Text(
-              "عدد التسبيحات",
-              style: GoogleFonts.elMessiri(
-                fontSize: 25,
-                fontWeight: FontWeight.w600,
-                color: const Color(0xff242424),
-              ),
-            ),
-            const SizedBox(
-              height: 35,
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                color: Color(0xffB7935F),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(20),
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        children: [
+          Stack(
+            alignment: Alignment.topCenter,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 30),
+                child: Image.asset(
+                  "assets/images/head of seb7a.png",
                 ),
               ),
-              padding: const EdgeInsets.all(20),
-              child: Text(
-                "$num",
+              Padding(
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.105),
+                child: GestureDetector(
+                    onTap: ontap,
+                    child: Image.asset("assets/images/body of seb7a.png")),
               ),
+            ],
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          Text(
+            "عدد التسبيحات",
+            textAlign: TextAlign.center,
+            style: MyThemeData.lightTheme.textTheme.bodyMedium,
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+            decoration: BoxDecoration(
+              color: const Color.fromRGBO(183, 147, 95, 80),
+              borderRadius: BorderRadius.circular(20),
             ),
-            const SizedBox(
-              height: 25,
+            child: Text(
+              "$counter",
+              textAlign: TextAlign.center,
+              style:
+                  GoogleFonts.inter(fontSize: 25, fontWeight: FontWeight.w400),
             ),
-            ElevatedButton(
-              onPressed: () {
-                num++;
-                setState(() {
-                  if (num >= 31) {
-                    num = 0;
-                  }
-                  Azkar;
-                });
-              },
-              style: const ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(
-                  Color(0xffB7935F),
-                ),
-              ),
-              child: const Text(
-                "سبحان الله",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                    fontWeight: FontWeight.w400),
-              ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+            decoration: BoxDecoration(
+              color: const Color(0xffB7935F),
+              borderRadius: BorderRadius.circular(30),
             ),
-          ],
-        ),
-      ],
+            child: Text(
+              tasbehat[index],
+              textAlign: TextAlign.center,
+              style: GoogleFonts.inter(
+                  textStyle: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white)),
+            ),
+          ),
+        ],
+      ),
     );
+  }
+
+  void ontap() {
+    counter++;
+    if (counter == 33) {
+      index++;
+      counter = 0;
+    }
+    if (index == tasbehat.length) {
+      index = 0;
+    }
+    setState(() {});
   }
 }
