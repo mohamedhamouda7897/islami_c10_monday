@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class RadioTab extends StatelessWidget {
   static const String routeName = "RadioTab";
 
-   RadioTab({super.key});
+   const RadioTab({super.key});
 
   @override
   Widget build(BuildContext context) {

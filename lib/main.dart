@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_c10_monday/home/home.dart';
 import 'package:islami_c10_monday/home/tabs/radio_tab.dart';
+import 'package:islami_c10_monday/home/tabs/sebha_tab.dart';
 import 'package:islami_c10_monday/my_theme.dart';
 import 'package:islami_c10_monday/sura_details.dart';
 
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.routeName: (context) =>   HomeScreen(),
         SuraDetailsScreen.routeName: (context) =>   SuraDetailsScreen(),
-        RadioTab.routeName: (context) => RadioTab(),
+        RadioTab.routeName: (context) => const RadioTab(),
+        SebhaTab.routeName: (context) =>  SebhaTab(),
       },
     );
   }
