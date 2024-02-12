@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RadioTab extends StatelessWidget {
-  static const String routeName = "RadioTab";
 
    const RadioTab({super.key});
 
