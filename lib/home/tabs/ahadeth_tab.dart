@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_c10_monday/my_theme.dart';
 
@@ -30,7 +31,7 @@ class _AhadethTabState extends State<AhadethTab> {
           color: Color(0xFFB7935F),
         ),
         Text(
-          "Ahadeth",
+          AppLocalizations.of(context)!.ahadeth,
           style:
               GoogleFonts.elMessiri(fontSize: 25, fontWeight: FontWeight.w600),
         ),

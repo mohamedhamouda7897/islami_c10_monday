@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_c10_monday/home/tabs/ahadeth_tab.dart';
 import 'package:islami_c10_monday/home/tabs/quran_tab.dart';
 import 'package:islami_c10_monday/home/tabs/radio_tab.dart';
@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Scaffold(
           appBar: AppBar(
             title: Text(
-              "إسلامي",
+              AppLocalizations.of(context)!.app_name,
             ),
           ),
           bottomNavigationBar: BottomNavigationBar(
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> tabs = [
     QuranTab(),
     const SebhaTab(),
-     AhadethTab(),
+    AhadethTab(),
     const RadioTab(),
     const SettingsTab()
   ];
