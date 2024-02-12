@@ -20,10 +20,8 @@ class MyApp extends StatelessWidget {
       darkTheme: MyThemeData.darkTheme,
       themeMode: ThemeMode.light,
       routes: {
-
         HomeScreen.routeName: (context) =>   HomeScreen(),
         SuraDetailsScreen.routeName: (context) =>   SuraDetailsScreen(),
-
       },
     );
   }
