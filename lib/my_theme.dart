@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
 class MyThemeData{
 
   static ThemeData lightTheme=ThemeData(
@@ -20,6 +21,7 @@ class MyThemeData{
     ),
     brightness: Brightness.light,
     scaffoldBackgroundColor: Colors.transparent,
+
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.black,
@@ -32,6 +34,7 @@ class MyThemeData{
       appBarTheme: AppBarTheme(
           backgroundColor: Colors.transparent,
           centerTitle: true,
+
           iconTheme: IconThemeData(
               color: Colors.black,
               size: 30
@@ -46,3 +49,4 @@ class MyThemeData{
 
   );
 }
+
