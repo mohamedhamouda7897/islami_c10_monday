@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         Scaffold(
           appBar: AppBar(
-            title: Text(
+            title: const Text(
               "إسلامي",
             ),
           ),
@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 index = value;
                 setState(() {});
               },
-              items: [
+              items: const [
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage("assets/images/ic_quran.png")),
                     label: "add"),
@@ -65,8 +65,8 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> tabs = [
     QuranTab(),
     SebhaTab(),
-    AhadethTab(),
-    RadioTab(),
-    SettingsTab()
+    const AhadethTab(),
+    const RadioTab(),
+    const SettingsTab()
   ];
 }
