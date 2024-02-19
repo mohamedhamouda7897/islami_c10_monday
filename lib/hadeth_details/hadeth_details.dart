@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:islami_c10_monday/hadeth_details/hadeth_details_provider.dart';
 import 'package:islami_c10_monday/models/hadeth_model.dart';
+import 'package:provider/provider.dart';
 
 class HadethDetails extends StatelessWidget {
   static const String routeName = "HadethDetails";
@@ -8,20 +10,19 @@ class HadethDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var model = ModalRoute.of(context)!.settings.arguments as HadethModel;
-    return Container(
+    var provider = Provider.of<HadethDetailsProvider>(context);    return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage("assets/images/background.png"),
               fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(
-          title: Text("${model.title}"),
+          title: Text("${provider.hadethSelected?.title}"),
         ),
         body: Center(
           child: Container(
-            height: MediaQuery.of(context).size.height *.6, //  400
-            padding: EdgeInsets.symmetric(vertical: 16,horizontal: 8),
+            height: MediaQuery.of(context).size.height * .6, //  400
+            padding: EdgeInsets.symmetric(vertical: 16, horizontal: 8),
             alignment: Alignment.center,
             margin: EdgeInsets.all(18),
             decoration: BoxDecoration(
@@ -29,11 +30,11 @@ class HadethDetails extends StatelessWidget {
             child: ListView.builder(
               itemBuilder: (context, index) {
                 return Text(
-                  model.content[index],
+                  provider.hadethSelected?.content[index]??"",
                   textAlign: TextAlign.center,
                 );
               },
-              itemCount: model.content.length,
+              itemCount: provider.hadethSelected?.content.length??0,
             ),
           ),
         ),

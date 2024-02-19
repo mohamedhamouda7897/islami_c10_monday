@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:islami_c10_monday/sura_details.dart';
+import 'package:islami_c10_monday/sura_details/sura_details.dart';
 import 'package:islami_c10_monday/models/sura_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -165,7 +165,9 @@ class QuranTab extends StatelessWidget {
                 child: Text(
                   suraNames[index],
                   textAlign: TextAlign.center,
-                  style:  Theme.of(context).textTheme.bodyMedium,
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: Theme.of(context).colorScheme.secondary,
+                      ),
                 ),
               );
             },
